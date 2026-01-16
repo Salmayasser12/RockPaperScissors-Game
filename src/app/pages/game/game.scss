@@ -1,0 +1,189 @@
+.rps-card {
+  width: 340px;
+  background: white;
+  border-radius: 24px;
+  padding: 32px 24px;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  h3 {
+    color: #3b82f6;
+    margin-bottom: 24px;
+  }
+
+  .choices {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    button {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      border: none;
+      background: #f3f4f6;
+      font-size: 36px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+    }
+  }
+
+  .status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .result {
+    border: 2px solid #3b82f6;
+    border-radius: 16px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .result {
+    animation: pop 0.3s ease;
+  }
+
+  .result.win {
+    border-color: #22c55e;
+    color: #22c55e;
+  }
+
+  .result.lose {
+    border-color: #ef4444;
+    color: #ef4444;
+  }
+
+  .result.draw {
+    border-color: #facc15;
+    color: #facc15;
+  }
+
+  .restart {
+    margin-top: 16px;
+    padding: 10px 16px;
+    border-radius: 16px;
+    border: 2px solid #3b82f6;
+    background: transparent;
+    color: #3b82f6;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: #3b82f6;
+      color: white;
+    }
+  }
+
+  .moves {
+    margin: 16px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  .final-result {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+
+    &.win {
+      color: #22c55e;
+    }
+
+    &.lose {
+      color: #ef4444;
+    }
+
+    &.draw {
+      color: #facc15;
+    }
+  }
+
+ .actions {
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.restart {
+  padding: 10px 20px;
+  border-radius: 18px;
+  border: 2px solid #3b82f6;
+  background: transparent;
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: #3b82f6;
+    color: white;
+  }
+}
+
+.history {
+  padding: 10px 20px;
+  border-radius: 18px;
+  border: 2px solid #9ca3af;
+  background: transparent;
+  color: #6b7280;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-left: 10px;
+
+  &:hover {
+    background: #9ca3af;
+    color: white;
+  }
+  .history:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: transparent;
+  border-color: #d1d5db;
+  color: #9ca3af;
+}
+
+}
+
+
+
+
+}

@@ -1,0 +1,50 @@
+<div class="page">
+  <div class="card">
+
+    <h1>Game History</h1>
+
+    <p *ngIf="history.length === 0">
+      No rounds played yet.
+    </p>
+
+  <div *ngFor="let item of history" class="history-item">
+  <div class="moves">
+    🧍 You vs 💻 Computer
+  </div>
+
+  <div
+    class="result"
+    [ngClass]="{
+      win: item.result === 'Win',
+      lose: item.result === 'Lose',
+      draw: item.result === 'Draw'
+    }"
+  >
+    <span *ngIf="item.result === 'Win'">Player Won</span>
+    <span *ngIf="item.result === 'Lose'">Computer Won</span>
+    <span *ngIf="item.result === 'Draw'">Draw</span>
+  </div>
+</div>
+
+
+  <div class="actions">
+  <button
+    type="button"
+    class="primary-btn"
+    (click)="back()"
+  >
+    BACK
+  </button>
+
+  <button
+    type="button"
+    class="secondary-btn danger"
+    (click)="clear()"
+  >
+    CLEAR
+  </button>
+</div>
+
+
+  </div>
+</div>

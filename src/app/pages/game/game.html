@@ -1,0 +1,38 @@
+<div class="rps-card">
+
+  <h1>Rock–Paper–Scissors</h1>
+  <h3>Choose!</h3>
+
+  <div class="choices">
+    <button (click)="play('Rock')">✊</button>
+    <button (click)="play('Paper')">📜</button>
+    <button (click)="play('Scissors')">✂️</button>
+  </div>
+  <div class="moves" *ngIf="lastPlayerMove">
+    <div>Your Move: {{ lastPlayerMove }}</div>
+    <div>Computer Move: {{ lastComputerMove }}</div>
+  </div>
+
+  <div class="status">
+    <div>You: {{ playerScore }}</div>
+    <div>Computer: {{ computerScore }}</div>
+  </div>
+  <div class="final-result" *ngIf="finalResult" [ngClass]="finalResult.toLowerCase()">
+    <span *ngIf="finalResult === 'Win'">YOU WIN 🎉</span>
+    <span *ngIf="finalResult === 'Lose'">YOU LOSE 😢</span>
+    <span *ngIf="finalResult === 'Draw'">DRAW 🤝</span>
+  </div>
+
+  <div class="result" [ngClass]="{
+  win: lastResult?.includes('Win'),
+  lose: lastResult?.includes('Lose'),
+  draw: lastResult?.includes('Draw')
+}">
+    {{ lastResult || 'RESULT' }}
+  </div>
+  <div class="actions">
+    <button type="button" class="restart" (click)="restart()">RESTART</button>
+    <button type="button" class="history" [disabled]="!matchFinished" (click)="goHistory()">HISTORY</button>
+  </div>
+
+</div>

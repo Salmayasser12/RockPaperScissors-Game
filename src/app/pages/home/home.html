@@ -1,0 +1,20 @@
+
+
+<div class="rps-card">
+
+  <h1>Rock–Paper–Scissors</h1>
+  <h3>Start a Match</h3>
+
+  <div class="options">
+    <label>Choose Match Score:</label>
+    <select class="select" [(ngModel)]="bestOf">
+      <option [value]="3">Game of 3</option>
+      <option [value]="5">Game of 5</option>
+      <option [value]="7">Game of 7</option>
+
+    </select>
+  </div>
+
+<button class="result-btn" (click)="start()">START GAME</button>
+
+</div>
