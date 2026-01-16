@@ -145,7 +145,7 @@ Potential enhancements for future iterations:
 This project is available for personal and educational use.
 
 ## 👤 Author
-##Salma Yasser##
+**Salma Yasser**
 Built with Angular 21 and TypeScript.
 
 ---
